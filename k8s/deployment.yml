@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: wisecow-deployment
-  labels:
-    app: wisecow
 spec:
   replicas: 3
   selector:
