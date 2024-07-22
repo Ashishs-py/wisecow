@@ -17,3 +17,8 @@ spec:
         image: ashish5ojha/wisecow:latest
         ports:
         - containerPort: 4499
+        env:
+         - name: SRVPORT
+           value: "4499"
+         - name: RSPFILE
+           value: "response"
