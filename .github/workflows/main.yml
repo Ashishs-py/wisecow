@@ -61,6 +61,9 @@ jobs:
         env:
           KUBECONFIG_BASE64: ${{ secrets.KUBECONFIG_BASE64 }}
 
+      - name: List files
+        run: ls -R
+
       - name: Configure kubectl
         run: kubectl config set-context --current --namespace=default
 
