@@ -7,6 +7,6 @@ spec:
     app: wisecow
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 4499
+      port: 80         # Port exposed externally
+      targetPort: 4499 # Port used internally in the container
   type: LoadBalancer
