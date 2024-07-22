@@ -67,10 +67,5 @@ jobs:
       - name: Configure kubectl
         run: kubectl config set-context --current --namespace=default
 
-      - name: Update Kubernetes deployment
-        run: |
-          kubectl set image deployment/wisecow-deployment wisecow=ashish5ojha/wisecow:latest
-          kubectl rollout status deployment/wisecow-deployment
-
       - name: Apply Kubernetes manifests
         run: kubectl apply -f k8s/
