@@ -5,8 +5,12 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  tls:
+  - hosts:
+    - 4.174.216.32.nip.io  # Replace with your temporary domain
+    secretName: wisecow-tls # Ensure you have a secret for TLS
   rules:
-  - host: wisecow.example.com
+  - host: 4.174.216.32.nip.io # Replace with your temporary domain
     http:
       paths:
       - path: /
